@@ -6,6 +6,7 @@ let imageSort = document.querySelector(".imagefirstdown");
 let deleteSection = document.querySelector(".deletesection");
 let sortofImages = true;
 const missions = [];
+
 imageSort.addEventListener("mouseover", (a) => {
   a.target.src = "./images/photo2down.svg";
 });
@@ -22,6 +23,7 @@ imageDelete.addEventListener("click", () => {
   tasks.value = "";
 });
 let elements = true;
+
 imageSort.addEventListener("click", () => {
   if (elements == true) {
     imageSort.src = "./images/photo3up.svg";
@@ -44,6 +46,7 @@ imageSort.addEventListener("click", () => {
   }
 });
 let elementss = true;
+
 addButtonoflist.addEventListener("click", () => {
   let valueoftasks = tasks.value;
   if (valueoftasks.trim() !== "") {
@@ -63,6 +66,7 @@ addButtonoflist.addEventListener("click", () => {
     containerofTasks.style.display = "block";
   }
 });
+
 function windowdis() {
   const addedlist = document.querySelector(".orderedlist");
   addedlist.innerHTML = "";
@@ -93,6 +97,7 @@ function windowdis() {
     containerofTasks.style.display = "none";
   }
 }
+
 function deleteFromlist(part1) {
   const indexremoved = missions.indexOf(part1);
   if (indexremoved !== -1) {
@@ -101,6 +106,7 @@ function deleteFromlist(part1) {
   }
   windowdis();
 }
+
 imageSort.addEventListener("click", () => {
   if (sortofImages) {
     missions.sort();
